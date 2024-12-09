@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  font-family: "Montserrat";
+}
+body {
+  background-image: url("./assets/images/background.jpeg");
+  background-color: rgba(244, 246, 249, 0.6);
+  background-size: cover;
+  height: 100%;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 40px;
+}

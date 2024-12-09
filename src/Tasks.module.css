@@ -1,0 +1,32 @@
+.btnsGroup {
+  text-align: center;
+}
+
+.btnFilter {
+  font: 400 14px "Montserrat";
+}
+
+.Tasks {
+  margin-bottom: 90px;
+}
+
+.empty {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 20%;
+  margin: 0 auto;
+  text-align: center;
+}
+.empty > p {
+  font: 600 18px "Montserrat";
+}
+
+.img {
+  width: 100%;
+  /* padding: 0 calc(50% - 75px);
+  width: 20%;
+  height: auto;
+  margin-top: 20px; */
+}

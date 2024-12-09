@@ -1,0 +1,39 @@
+.ProgressBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 558px;
+  height: 38px;
+  gap: 4px;
+  margin: 15px 0;
+}
+
+.ProgressBarLeftSide {
+  background-color: rgb(223, 135, 255);
+  border-radius: 4px;
+  height: 26px;
+  line-height: 14.4px;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
+  transition: width 1s ease;
+}
+
+.ProgressBarRightSide {
+  border: 1.5px solid rgb(223, 135, 255);
+  border-radius: 4px;
+  height: 26px;
+  transition: width 1s ease;
+}
+
+.ProgressBarSeparator {
+  background-color: rgb(223, 135, 255);
+  width: 6px;
+  height: 38px;
+}
+
+.ProgressBarSpan {
+  color: rgb(156, 39, 176);
+}

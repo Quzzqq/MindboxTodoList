@@ -1,0 +1,55 @@
+.areaTodo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  /* gap: 30px; */
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 90%;
+  height: 40px;
+  border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ff2de06e;
+}
+
+.areaTodo:hover {
+  outline: 3px solid rgb(223, 135, 255);
+}
+
+.deleteTodo {
+  height: 28px;
+  width: 90px;
+}
+
+.todoName {
+  width: 70%;
+  height: 30px;
+  text-align: center;
+  font: 400 14px "Montserrat";
+  background-color: none;
+}
+
+.todoInput {
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #ff2ddf00;
+  border: none;
+  height: 100%;
+  text-align: center;
+  outline: none;
+}
+
+.checkBox {
+  width: 22px;
+  height: 22px;
+}
+
+.editBtns {
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}

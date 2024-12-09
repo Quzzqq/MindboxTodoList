@@ -1,0 +1,65 @@
+.block {
+  background: #fed4ff67;
+  border: 2px solid #000;
+  max-width: 50%;
+  min-height: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 6px 3px 3px grey;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.head {
+  text-align: center;
+  padding: 25px;
+  font: 700 25px "Montserrat";
+}
+
+hr {
+  border: solid 1px black;
+  margin-bottom: 8px;
+}
+
+.inpDiv {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.inp {
+  font: 400 14px "Montserrat";
+  border-radius: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 80%;
+  height: 35px;
+}
+
+.saveInp {
+  height: 25px;
+  width: 25px;
+  background-color: #c8fdb1;
+  color: #000;
+}
+
+.itemsLeft {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  font: 400 12px "Montserrat";
+}
+
+.ProgressBar {
+  position: absolute;
+  display: flex;
+  bottom: 20px;
+  /* left: ; */
+  left: 50%;
+  transform: translateX(-50%);
+}
