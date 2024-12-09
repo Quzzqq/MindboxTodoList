@@ -4,7 +4,8 @@ import { ITasksTodos } from "./types/todos";
 import { useState } from "react";
 import { handleSetFilter } from "./utils/handleSetFilter/handleSetFilter";
 import Todo from "./components/Todo/Todo";
-import sadSmile from "./assets/images/sadSmile.png";
+
+const sadSmile = require("./assets/images/sadSmile.png");
 
 const Tasks: React.FC<ITasksTodos> = ({ todos, setTodos }) => {
   const [filterTodos, setFilterTodos] = useState<
