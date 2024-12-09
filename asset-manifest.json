@@ -1,14 +1,15 @@
 {
   "files": {
     "main.css": "/MindboxTodoList/static/css/main.cf090b35.css",
-    "main.js": "/MindboxTodoList/static/js/main.c847ae9e.js",
+    "main.js": "/MindboxTodoList/static/js/main.91f16580.js",
     "static/media/background.jpeg": "/MindboxTodoList/static/media/background.ca5816bfb884b012368f.jpeg",
+    "static/media/sadSmile.png": "/MindboxTodoList/static/media/sadSmile.4d5d995ef4389098ca41.png",
     "index.html": "/MindboxTodoList/index.html",
     "main.cf090b35.css.map": "/MindboxTodoList/static/css/main.cf090b35.css.map",
-    "main.c847ae9e.js.map": "/MindboxTodoList/static/js/main.c847ae9e.js.map"
+    "main.91f16580.js.map": "/MindboxTodoList/static/js/main.91f16580.js.map"
   },
   "entrypoints": [
     "static/css/main.cf090b35.css",
-    "static/js/main.c847ae9e.js"
+    "static/js/main.91f16580.js"
   ]
 }
