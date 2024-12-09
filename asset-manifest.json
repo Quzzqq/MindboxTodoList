@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/MindboxTodoList/static/css/main.cf090b35.css",
+    "main.js": "/MindboxTodoList/static/js/main.c847ae9e.js",
+    "static/media/background.jpeg": "/MindboxTodoList/static/media/background.ca5816bfb884b012368f.jpeg",
+    "index.html": "/MindboxTodoList/index.html",
+    "main.cf090b35.css.map": "/MindboxTodoList/static/css/main.cf090b35.css.map",
+    "main.c847ae9e.js.map": "/MindboxTodoList/static/js/main.c847ae9e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cf090b35.css",
+    "static/js/main.c847ae9e.js"
+  ]
+}
