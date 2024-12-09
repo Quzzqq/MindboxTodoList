@@ -4,6 +4,7 @@ import { ITasksTodos } from "./types/todos";
 import { useState } from "react";
 import { handleSetFilter } from "./utils/handleSetFilter/handleSetFilter";
 import Todo from "./components/Todo/Todo";
+import sadSmile from "./assets/images/sadSmile.png";
 
 const Tasks: React.FC<ITasksTodos> = ({ todos, setTodos }) => {
   const [filterTodos, setFilterTodos] = useState<
@@ -60,7 +61,7 @@ const Tasks: React.FC<ITasksTodos> = ({ todos, setTodos }) => {
         ) : (
           <div className={styles.empty}>
             <p>Тут пока пусто</p>
-            <img className={styles.img} alt="Sad Smile" src={"/sad.png"} />
+            <img className={styles.img} alt="Sad Smile" src={sadSmile} />
           </div>
         )}
       </div>
