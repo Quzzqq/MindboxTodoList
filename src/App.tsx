@@ -1,58 +1,52 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./App.module.css";
 import { Button } from "@mui/material";
 import Tasks from "./Tasks";
-import { ITodos } from "./types/todos";
-import { handleAdd } from "./utils/handleAdd/handleAdd";
 import ProgressBar from "./components/ProgressBar/ProgressBar";
+import useTodos from "./hooks/useTodos";
+import { APP_STRINGS } from "./constants/strings";
 
 function App() {
-  const [value, setValue] = useState<string>("");
-  const [todos, setTodos] = useState<ITodos[]>([]);
-  const [progress, setProgress] = useState<number>(0);
-
-  useEffect(() => {
-    const firstData = localStorage.getItem("todos");
-    console.log(firstData);
-    firstData && setTodos(JSON.parse(firstData));
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-    const completedCount = todos.filter((todo) => todo.completed).length;
-    setProgress(todos.length > 0 ? (completedCount / todos.length) * 100 : 0);
-  }, [todos]);
+  const [inputValue, setInputValue] = useState("");
+  const { todos, setTodos, progress, itemsLeft } = useTodos();
 
   return (
-    <div className={styles.block}>
-      <header className={styles.head}>Todo List</header>
-      <hr />
-      <div className={styles.inpDiv}>
+    <div className={styles.container}>
+      <header className={styles.header}>{APP_STRINGS.header}</header>
+      <hr className={styles.divider} />
+
+      <div className={styles.inputContainer}>
         <input
-          placeholder="Add a new task"
-          className={styles.inp}
-          onChange={(e) => setValue(e.target.value)}
-          value={value}
+          placeholder={APP_STRINGS.addPlaceholder}
+          className={styles.input}
+          onChange={(e) => setInputValue(e.target.value)}
+          value={inputValue}
         />
         <Button
           variant="contained"
-          href="#contained-buttons"
-          className={styles.saveInp}
-          onClick={() => handleAdd(todos, value, setTodos)}
-          style={{
-            backgroundColor: "#c8fdb1",
-            color: "#000",
-            font: "400 14px Montserrat",
+          className={styles.addButton}
+          onClick={() => {
+            setTodos((prev) => [
+              ...prev,
+              {
+                name: inputValue,
+                completed: false,
+                id: Date.now().toString(),
+              },
+            ]);
+            setInputValue("");
           }}
         >
-          Add
+          {APP_STRINGS.addButton}
         </Button>
       </div>
+
       <Tasks todos={todos} setTodos={setTodos} />
-      <div className={styles.ProgressBar}>
+
+      <div className={styles.progressContainer}>
         <ProgressBar progress={progress} />
         <p className={styles.itemsLeft}>
-          {todos.filter((todo) => !todo.completed).length} items left
+          {itemsLeft} {APP_STRINGS.itemsLeft}
         </p>
       </div>
     </div>

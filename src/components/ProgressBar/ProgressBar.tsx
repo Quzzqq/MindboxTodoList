@@ -1,27 +1,25 @@
 import styles from "./ProgressBar.module.css";
 
-const ProgressBar = ({ progress }: { progress: number }) => {
+interface ProgressBarProps {
+  progress: number;
+}
+
+const ProgressBar: React.FC<ProgressBarProps> = ({ progress }) => {
+  const roundedProgress = Math.round(progress);
+
   return (
-    <div className={styles["ProgressBar"]}>
+    <div className={styles.progressBarContainer}>
       <div
-        className={styles["ProgressBarLeftSide"]}
-        style={{
-          width: `${progress}%`,
-        }}
+        className={styles.progressBarFill}
+        style={{ width: `${roundedProgress}%` }}
+        aria-valuenow={roundedProgress}
+        aria-valuemin={0}
+        aria-valuemax={100}
       >
-        {progress > 0 && (
-          <span className={styles.ProgressBarSpan}>
-            {progress >= 6 && `${Math.ceil(progress)}%`}
-          </span>
+        {roundedProgress > 5 && (
+          <span className={styles.progressText}>{roundedProgress}%</span>
         )}
       </div>
-      <div className={styles["ProgressBarSeparator"]}></div>
-      <div
-        className={styles["ProgressBarRightSide"]}
-        style={{
-          width: `${100 - progress}%`,
-        }}
-      ></div>
     </div>
   );
 };
